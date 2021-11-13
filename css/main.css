@@ -1,0 +1,207 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Comfortaa', cursive;
+    background-color: rgb(161, 238, 89);
+    background-image: url("../public/img/fondo3.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}  
+.grid-container {
+    display: grid;
+    grid-template-areas: "header header header"
+                        "sidebar main main"
+                        "footer footer footer";
+    grid-template-rows:  40px 1fr 1fr;       
+    grid-template-columns: 1fr 1fr 1fr;            
+    height: 1280px;
+}
+/*=================Gradiente en banner de titulo y navegador===================*/
+.grid-header {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    grid-area: header;
+    top: 0px;
+    position: sticky;
+    display:flex;
+    height:40px;
+    justify-content: space-between;
+    align-items:center;
+}
+.menu{
+    top: 0px;
+    text-align: right;
+    font: 1.3rem Comfortaa;
+    color:rgb(204, 158, 226);
+    font-weight: 700;
+}
+.menu li a{
+    text-decoration: none; 
+    outline: none; 
+    padding: 0.3em; 
+    transition:2s;
+}
+/*=====================hover en botones del navegador===================*/
+.menu li a:hover { 
+    background-color:rgb(255, 255, 68);
+}
+
+.menu li a:active {
+    background: #265301;
+    color: #CDFEAA;
+}    
+.menu li {
+    display: inline-block;
+}
+
+h1{
+    font-size: 2rem;
+    color: #084a68;
+    font: 46pt/50pt;
+    font-weight: 800;
+    font-stretch: normal;
+    padding: 15px;
+}
+.grid-sidebar   {
+    grid-area: sidebar;
+}
+.foto__izquierda img {
+    display:flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 10px;
+    max-width:700px;
+    justify-content: center;
+    align-items: center;
+}
+/* ==============hover en las imagenes de la izquierda=======================*/
+.foto__izquierda img:hover {
+    display:flex;
+    width: 115%;
+    transition: 2s;
+}
+.grid-main {    
+    grid-area: main;
+}
+.grid-footer {
+    grid-area: footer;
+    margin-top: 1.5rem;
+}   
+.grid-footer ul {
+    display:flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.5rem 1.5rem;
+}
+.grid-footer ul li{
+    list-style-type: none;
+    padding:20px;
+}
+.grid-footer ul li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin:10px;
+}
+/*======================hover en la lista de redes sociales y botones de abajo================*/
+.grid-footer ul li:hover {
+    transition:3s;
+    background-color: whitesmoke;
+}
+.nav-sobre-nosotros ul {
+    display:flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space between;
+}
+.nav-sobre-nosotros ul li {
+    list-style-type: none;
+}
+.nav-sobre-nosotros ul li a {
+    text-decoration:none;
+    font-size: 1.5rem;
+}
+.grid-item {
+    padding: 20px;
+}
+h2{
+    font-size: 1.3rem;
+    color: #a70000;
+    font: 46pt/50pt;
+    font-weight: 800;
+    font-stretch: normal;
+    padding: 15px;
+    text-align:center;
+}
+.texto__descriptivo     {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #500d0d;
+    padding: 40px;
+}
+.texto__descriptivo p {
+    margin-bottom: 1.5rem;
+}
+.service {
+    grid-area: main;
+    padding:10px;
+}    
+.abonos { 
+    padding: 10px;
+}
+/*=======================Animacion en tabla pagina abono.html=====================*/
+.texto-tabla { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    font-size: 1.3rem;
+    color: cyan;
+    padding: 20px;
+    background-color:green; 
+    border-spacing: 5px;
+    border-color: black;
+    margin-top: 1.5rem;
+    animation-duration:2s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        }
+}
+.cuentas {
+    grid-area: main;
+    justify-content: center;
+    align-items: space-evenly;
+}
+.texto-cuentas {
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-around;
+    font-size: 1.0rem;
+    color: rgb(27, 78, 78);
+    background-color:rgb(131, 253, 131); 
+    border-color: black;
+    margin-top: 1rem;
+}
+form { 
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.derechos { 
+    display:inline-block;
+}
+/*================hover en "todos los derechos reservados" de todas las paginas.html================*/
+.derechos:hover { 
+    transform: rotate(360deg);
+    transition: 3s;
+}

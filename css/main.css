@@ -10,41 +10,31 @@ body{
     background-repeat: no-repeat;
     background-size: cover; 
 }  
-.grid-container {
-    display: grid;
-    grid-template-areas: "header header header"
-                        "sidebar main main"
-                        "footer footer footer";
-    grid-template-rows:  40px 1fr 1fr;       
-    grid-template-columns: 1fr 1fr 1fr;            
-    height: 1280px;
-}
+
 /*=================Gradiente en banner de titulo y navegador===================*/
-.grid-header {
+.header {
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    grid-area: header;
     top: 0px;
     position: sticky;
-    display:flex;
-    height:40px;
-    justify-content: space-between;
-    align-items:center;
+    height:60px;
+    /*justify-content: space-between;
+    align-items:center;*/
 }
-.menu{
+/*.menu{
     top: 0px;
     text-align: right;
     font: 1.3rem Comfortaa;
     color:rgb(204, 158, 226);
     font-weight: 700;
 }
-.menu li a{
+/*.menu li a{
     text-decoration: none; 
     outline: none; 
     padding: 0.3em; 
     transition:2s;
-}
+}*/
 /*=====================hover en botones del navegador===================*/
-.menu li a:hover { 
+/*.menu li a:hover { 
     background-color:rgb(255, 255, 68);
 }
 
@@ -61,34 +51,19 @@ h1{
     color: #084a68;
     font: 46pt/50pt;
     font-weight: 800;
-    font-stretch: normal;
-    padding: 15px;
-}
-.grid-sidebar   {
-    grid-area: sidebar;
-}
-.foto__izquierda img {
-    display:flex;
-    width: 100%;
-    flex-direction: row;
-    padding: 10px;
-    max-width:700px;
-    justify-content: center;
-    align-items: center;
-}
-/* ==============hover en las imagenes de la izquierda=======================*/
-.foto__izquierda img:hover {
-    display:flex;
-    width: 115%;
-    transition: 2s;
-}
-.grid-main {    
-    grid-area: main;
-}
-.grid-footer {
-    grid-area: footer;
-    margin-top: 1.5rem;
-}   
+    padding: auto;
+    margin: auto;
+}*/
+
+ img {
+    width: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 10px;
+    max-width:500px;
+}    
 .grid-footer ul {
     display:flex;
     width: 100%;
@@ -137,7 +112,8 @@ h2{
     text-align:center;
 }
 .texto__descriptivo     {
-    font-size: 1.6rem;
+    margin-top: 20px;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #500d0d;
     padding: 40px;
@@ -166,7 +142,7 @@ h2{
     margin-top: 1.5rem;
     animation-duration:2s;
     animation-name: blink;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; 
 }
 @keyframes blink {
     0% {
@@ -191,7 +167,9 @@ h2{
     background-color:rgb(131, 253, 131); 
     border-color: black;
     margin-top: 1rem;
-}
+    border-spacing: 20px 20px;
+    border: 1px solid #000;
+   }
 form { 
     display: inline-block;
     margin-top: 2rem;
@@ -204,4 +182,13 @@ form {
 .derechos:hover { 
     transform: rotate(360deg);
     transition: 3s;
+}
+.texto-tabla-cuentas { 
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 20px 20px;
+    border: 1px solid #000;
+}
+.texto-mapa { 
+    text-align: center;
 }

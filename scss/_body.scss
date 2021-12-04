@@ -1,0 +1,27 @@
+$main-color:rgb(16, 24, 7);
+
+.body-style   {
+    font-family: 'Comfortaa', cursive;
+    background-color: rgb(161, 238, 89);
+    background-image: url(../public/img/fondo3.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}  
+h2{
+    color: #a70000;
+    font: 46pt/50pt;
+    font-weight: 800;
+    font-stretch: normal;
+    padding: 15px;
+    text-align:center;
+}
+.texto__descriptivo     {
+    margin-top: 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 40px;
+    color: $main-color;
+} 
+.cajas {
+    margin-top:60px;
+}

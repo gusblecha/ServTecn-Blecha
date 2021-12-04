@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+//---------------import----------------//
+ 
+@import "body";
+
+img     {
+    width: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 10px;
+    max-width:500px;
+}  
+.texto__descriptivo p {
+    margin-bottom: 1.5rem;
+}
+.service {
+    grid-area: main;
+    padding:10px;
+}    
+.abonos { 
+    padding: 10px;
+}
+
+
+/*=======================Animacion en tabla pagina abono.html=====================*/
+.texto-tabla { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    font-size: 1.3rem;
+    color: cyan;
+    padding: 20px;
+    background-color:green; 
+    border-spacing: 5px;
+    border-color: black;
+    margin-top: 1.5rem;
+    animation-duration:2s;
+    animation-name: blink;
+    animation-iteration-count: infinite; 
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        }
+}
+form { 
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.derechos { 
+    display:inline-block;
+}
+/*================hover en "todos los derechos reservados" de todas las paginas.html================*/
+.derechos:hover { 
+    transform: rotate(360deg);
+    transition: 3s;
+}
+.texto-tabla-cuentas { 
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 20px 20px;
+    border: 1px solid #000;
+}
+.texto-mapa { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.navbar {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    top: 0px;
+    margin-bottom:60px ;
+}
+.accordion-padding { 
+    padding:0px 300px 0px 300px;
+}
+.redes { 
+    margin: 20px;
+    background-color: wheat;
+    padding: 20px;
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: space-evenly;
+    object-fit: contain;
+}
+// prueba de bucle CON OPERACION//
+@for $nro from 1 to 6 {
+    h#{$nro} { 
+        font-size: (6em-$nro)* 0.4
+    }
+}
+//-----------Mixins en pagina Proyecto.html--------//
+@mixin caja ($fondo, $ancho, $alto) {
+    background-color: $fondo;
+    width: $ancho;
+    height: $alto;
+    margin: 20px;
+    padding: 20px;
+}
+
+.cajas { 
+     margin-top: 60px;
+}
+.caja-1 {
+    @include caja(#da0c0c,160px,190px);
+
+}
+.caja-2 {
+    @include caja(green,80px,150px)
+}
+.caja-3 { 
+    @include caja(grey,100px,280px);
+}
+//-------------otra Operacion--------------//
+$anchura:300px;
+$altura:300px;
+.caja-4 { 
+    background-color: magenta;
+    width: $anchura*2;
+    height: $altura/2;
+}
